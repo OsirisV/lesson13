@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Setting the style of page elements</title>
+    <style>
+        span {
+            background-color: red;            
+            color: blue;
+            font-size: 21pt;
+            font-family: arial, helvetica, sans-serif;
+            padding: 200px;
+            border: 5px solid black;
+        }
+    </style>
+        <script>
+        function toggle() {
+            var myElement = document.getElementById("id1");
+
+            if (myElement.style.backgroundColor = 'red') {
+                myElement.style.backgroundColor = 'green';
+                myElement.style.color = 'orange';
+                myElement.style.fontSize = '30pt';
+                myElement.style.border = '20px solid black';
+                myElement.style.padding = '300px';
+            } 
+            else {
+                myElement.style.backgroundColor = 'purple';
+                myElement.style.color = 'blue';
+                myElement.style.fontSize = '10pt';
+                myElement.style.border = '20px solid black';
+                myElement.style.padding = '210px';
+                 }
+        }
+         window.onload = function() {
+            document.getElementById("btn1").onclick = toggle;
+        }
+    </script>
+    
+</head>
+<body>
+    <span id="id1">Welcome back to my site.</span>
+    <input type="button" id="btn1" value="Toggle"/>
+</body>
+</html>
